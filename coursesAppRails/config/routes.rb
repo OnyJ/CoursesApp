@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :course_sessions
   resources :courses
   devise_for :users,
              path: '',
