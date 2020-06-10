@@ -20,5 +20,6 @@ Rails.application.routes.draw do
 
   namespace :admins do
     resources :categories
+    resources :courses
   end
 end
