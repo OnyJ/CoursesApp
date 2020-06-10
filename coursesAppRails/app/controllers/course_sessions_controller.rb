@@ -46,6 +46,7 @@ class CourseSessionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def course_session_params
-      params.fetch(:course_session, {})
+      params.require(:course_session).permit(:room_id)
+      # params.fetch(:course_session, {})
     end
 end
