@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 2020_06_10_111458) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "course_sessions", force: :cascade do |t|
+    t.date "day"
+    t.boolean "course_session_finished"
+    t.boolean "course_session_started"
+    t.integer "max_students", default: 20
+    t.integer "room_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.bigint "teacher_id"
@@ -42,6 +52,16 @@ ActiveRecord::Schema.define(version: 2020_06_10_111458) do
     t.string "jti", null: false
     t.datetime "exp"
     t.index ["jti"], name: "index_jwt_blacklist_on_jti"
+  end
+
+  create_table "registrations", force: :cascade do |t|
+    t.integer "grade"
+    t.bigint "user_id", null: false
+    t.bigint "course_session_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_session_id"], name: "index_registrations_on_course_session_id"
+    t.index ["user_id"], name: "index_registrations_on_user_id"
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -67,4 +87,6 @@ ActiveRecord::Schema.define(version: 2020_06_10_111458) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "registrations", "course_sessions"
+  add_foreign_key "registrations", "users"
 end
