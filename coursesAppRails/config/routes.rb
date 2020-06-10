@@ -17,4 +17,8 @@ Rails.application.routes.draw do
                sessions: 'sessions',
                registrations: 'registrations'
              }
+
+  namespace :admins do
+    resources :categories
+  end
 end
