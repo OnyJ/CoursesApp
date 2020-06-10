@@ -1,4 +1,4 @@
 class Registration < ApplicationRecord
   belongs_to :user
-  belongs_to :session
+  belongs_to :course_session
 end
