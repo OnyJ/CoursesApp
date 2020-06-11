@@ -37,3 +37,15 @@ export const createRoomSuccess = (response) => {
         type: actionTypes.CREATE_ROOM_SUCCESS, 
     }
 } 
+
+export const createCourseSessionFail = (response) => {
+    return {
+        type: actionTypes.CREATE_COURSE_SESSION_FAIL, 
+    }
+} 
+
+export const createCourseSessionSuccess = (response) => {
+    return {
+        type: actionTypes.CREATE_COURSE_SESSION_SUCCESS, 
+    }
+} 

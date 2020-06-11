@@ -2,6 +2,7 @@ import React from 'react';
 import AdminCreateCategory from '../components/AdminCreateCategory'
 import AdminCreateCourse from '../components/AdminCreateCourse'
 import AdminCreateRoom from '../components/AdminCreateRoom'
+import AdminCreateCourseSession from '../components/AdminCreateCourseSession'
 
 const AdminDashboard = () => {
     return(
@@ -9,6 +10,7 @@ const AdminDashboard = () => {
             <AdminCreateCategory/>
             <AdminCreateCourse/>
             <AdminCreateRoom/>
+            <AdminCreateCourseSession/>
         </div>
     )
 }
