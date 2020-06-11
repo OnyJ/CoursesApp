@@ -3,6 +3,7 @@ import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT_SUCCESS,
+    LOGOUT_FAIL,
     REGISTER_SUCCESS,
     REGISTER_FAIL
   } from '../actions/accountActionTypes';
@@ -28,7 +29,7 @@ import {
         Cookies.set('token', action.token)
         return {
           ...state,
-          ...action.token,
+          action: action.token,
           isAuthenticated: true,
           user: action.user,
         }
@@ -42,6 +43,11 @@ import {
           user: null,
           isAuthenticated: false,
         }
+       case LOGOUT_FAIL:
+         return {
+           ...state,
+           isAuthenticated: true,
+         } 
       default:
         return state
     }

@@ -2,14 +2,33 @@ import React from 'react';
 import Register from './pages/Register'
 import Login from './pages/Login'
 import Logout from './pages/Logout'
+import Navbar from './components/Navbar'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link
+} from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
-      <Register/>
-      <Login/>
-      <Logout/>
-    </div>
+      <Router>
+        <div>
+          <Navbar/>
+          <Switch>
+            <Route path='/register'>
+              <Register/>
+            </Route>
+            <Route path='/login'>
+              <Login/>
+            </Route>
+            <Route path='/logout'>
+              <Logout/>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+   
   );
 }
 
