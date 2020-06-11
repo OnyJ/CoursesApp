@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  namespace :admins do
+    get 'student/index'
+    get 'student/delete'
+  end
+  namespace :admins do
+    get 'teacher/index'
+    get 'teacher/delete'
+  end
   #resources :categories
   #resources :course_sessions
   resources :session_registrations
@@ -23,6 +31,8 @@ Rails.application.routes.draw do
     resources :courses
     resources :rooms
     resources :course_sessions
+    resources :teacher, only: [:index, :destroy]
+    resources :student, only: [:index, :destroy]
   end
 
   namespace :teachers do 
