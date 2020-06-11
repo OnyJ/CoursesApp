@@ -3,9 +3,9 @@ class Admins::CategoriesController < ApplicationController
   	before_action :check_if_admin
 
 
-    def index
-      @categories = Category.all
-    end
+  def index
+    @categories = Category.all
+  end
 
     def create
         @category = Category.new(category_params)
