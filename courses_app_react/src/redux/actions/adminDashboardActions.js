@@ -24,3 +24,16 @@ export const createCourseSuccess = (response) => {
         type: actionTypes.CREATE_COURSE_SUCCESS, 
     }
 } 
+
+
+export const createRoomFail = (response) => {
+    return {
+        type: actionTypes.CREATE_ROOM_FAIL, 
+    }
+} 
+
+export const createRoomSuccess = (response) => {
+    return {
+        type: actionTypes.CREATE_ROOM_SUCCESS, 
+    }
+} 

@@ -2,7 +2,9 @@ import {
     CREATE_CATEGORY_SUCCESS, 
     CREATE_CATEGORY_FAIL,
     CREATE_COURSE_SUCCESS, 
-    CREATE_COURSE_FAIL
+    CREATE_COURSE_FAIL, 
+    CREATE_ROOM_SUCCESS, 
+    CREATE_ROOM_FAIL
 } from '../actions/adminDashboardActionTypes'
 
 const initialState = {
@@ -30,6 +32,15 @@ const createCategoryReducer = (state = initialState, action) => {
             return {
                ...state,
                }
+        case CREATE_ROOM_SUCCESS:
+            return {
+                ...state, 
+                ROOM: action.room
+                }
+        case CREATE_ROOM_FAIL:
+            return {
+                ...state,
+                }
         default:
             return state
     }
