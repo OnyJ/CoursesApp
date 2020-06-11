@@ -10,10 +10,13 @@ const Navbar = () => {
 						<Link to='/Register'>Register</Link>
 					</li>
 					<li>
-					<Link to='/Login'>Login</Link>
+						<Link to='/Login'>Login</Link>
 					</li>
 					<li>
 						<Link to='/Logout'>Logout</Link>
+					</li>	
+					<li>
+						<Link to='/AdminDashboard'>Admin</Link>
 					</li>
 				</ul>
 			</nav>
