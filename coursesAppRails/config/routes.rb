@@ -24,4 +24,8 @@ Rails.application.routes.draw do
     resources :rooms
     resources :course_sessions
   end
+
+  namespace :teachers do 
+    resources :session_registrations
+  end
 end
