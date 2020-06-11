@@ -1,8 +1,11 @@
 import { createStore, combineReducers } from 'redux';
 import { applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
+import accountAuthReducer from './reducers/accountAuthReducer';
+
 
 const rootReducer = combineReducers({
+    auth: accountAuthReducer
 
 })
 
