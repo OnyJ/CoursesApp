@@ -1,9 +1,13 @@
 import React from 'react';
 import AdminCreateCategory from '../components/AdminCreateCategory'
+import AdminCreateCourse from '../components/AdminCreateCourse'
 
 const AdminDashboard = () => {
     return(
-        <AdminCreateCategory/>
+        <div>
+            <AdminCreateCategory/>
+            <AdminCreateCourse/>
+        </div>
     )
 }
 
