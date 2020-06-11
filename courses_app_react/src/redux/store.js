@@ -2,10 +2,12 @@ import { createStore, combineReducers } from 'redux';
 import { applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import accountAuthReducer from './reducers/accountAuthReducer';
+import createCategoryReducer from './reducers/adminDashboardReducer';
 
 
 const rootReducer = combineReducers({
-    auth: accountAuthReducer
+    auth: accountAuthReducer,
+    admin: createCategoryReducer
 
 })
 

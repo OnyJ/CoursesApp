@@ -21,6 +21,14 @@ export const loadUser = (response) => {
     }
 }
 
+export const test = (registerSuccess) => {
+    return {
+            type: actionTypes.LOAD_USER,
+            user: registerSuccess.user,
+            token: registerSuccess.token,
+        }
+    }
+
 export const loginSuccess = (response) => {
     return {
         type: actionTypes.LOGIN_SUCCESS,
@@ -38,5 +46,12 @@ export const loginFail = () => {
 export const logoutSuccess = () => {
     return {
         type: actionTypes.LOGOUT_SUCCESS,
+    }
+}
+
+
+export const logoutFail = () => {
+    return {
+        type: actionTypes.LOGOUT_FAIL,
     }
 }
