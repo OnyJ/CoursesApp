@@ -1,10 +1,13 @@
 import {
     CREATE_CATEGORY_SUCCESS, 
-    CREATE_CATEGORY_FAIL
+    CREATE_CATEGORY_FAIL,
+    CREATE_COURSE_SUCCESS, 
+    CREATE_COURSE_FAIL
 } from '../actions/adminDashboardActionTypes'
 
 const initialState = {
-    category: null
+    category: null, 
+    course: null
 }
 
 const createCategoryReducer = (state = initialState, action) => {
@@ -18,9 +21,22 @@ const createCategoryReducer = (state = initialState, action) => {
             return {
                 ...state,
             }
+        case CREATE_COURSE_SUCCESS:
+            return {
+                ...state, 
+                course: action.course
+            }
+        case CREATE_COURSE_FAIL:
+            return {
+               ...state,
+               }
         default:
             return state
     }
+
 }
 
-export default createCategoryReducer
+
+export default createCategoryReducer;
+
+

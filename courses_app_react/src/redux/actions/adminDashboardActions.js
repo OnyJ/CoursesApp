@@ -13,3 +13,14 @@ export const createCategoryFail = (response) => {
     }
 } 
 
+export const createCourseFail = (response) => {
+    return {
+        type: actionTypes.CREATE_COURSE_FAIL, 
+    }
+} 
+
+export const createCourseSuccess = (response) => {
+    return {
+        type: actionTypes.CREATE_COURSE_SUCCESS, 
+    }
+} 
