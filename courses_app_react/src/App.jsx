@@ -1,8 +1,10 @@
 import React from 'react';
+import Register from './pages/Register'
+import Login from './pages/Login'
 
 const App = () => {
   return (
-    <h1>This is a simple react app!</h1>
+    <Login/>
   );
 }
 
